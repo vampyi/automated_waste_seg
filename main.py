@@ -12,10 +12,10 @@ import tensorflow as tf
 # Function to predict the class of the image
 def getPrediction(filename):
     # Load trained model
-    model = tf.keras.models.load_model("/Users/vansh/Desktop/SORT/Resources/Model/final_model_weights.hdf5")
+    model = tf.keras.models.load_model("/Users/deeps/Desktop/SORT/Resources/Model/final_model_weights.hdf5")
     
     # Load and preprocess the image
-    img_path = f"/Users/vansh/Desktop/SORT/static/{filename}"
+    img_path = f"/Users/deeps/Desktop/SORT/static/{filename}"
     img = load_img(img_path, target_size=(180, 180))  # Resize image
     img = img_to_array(img) / 255.0  # Normalize pixel values
     img = np.expand_dims(img, axis=0)  # Add batch dimension
